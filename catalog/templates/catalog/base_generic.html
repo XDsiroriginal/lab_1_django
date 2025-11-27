@@ -27,7 +27,7 @@
                         <li style="margin-top: 100px">User: {{ user.get_username }}</li>
                         <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
                         <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
-                        {% if perms.catalog.can_view_all_borrowers%}
+                        {% if perms.catalog.can_view_all_borrowers %}
                             <li style="margin-top: 100px">{{ user.get_username }}</li>
                             <li><a href="{% url 'all-borrowed' %}">all borrowed</a></li>
                         {% endif %}
